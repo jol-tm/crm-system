@@ -331,7 +331,6 @@ class Proposta
 		];
 		header("Location: ./");
 		return false;
-
 	}
 	
 	public function recusarProposta(): bool

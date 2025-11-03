@@ -67,7 +67,7 @@ $baseAssetsPath = "/crm-system/app/assets/";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BMS | <?= $pageTitle; ?></title>
 	<link rel="icon" href="<?= $baseAssetsPath . "LOGOTIPO.svg"; ?>" type="image/svg+xml">
-	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v=1"; ?>">
+	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v1"; ?>">
 	<script defer src="<?= $baseAssetsPath . "script.js"; ?>"></script>
 </head>
 
