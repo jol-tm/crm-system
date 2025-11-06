@@ -67,7 +67,7 @@ $baseAssetsPath = "/crm-system/app/assets/";
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>BMS | <?= $pageTitle; ?></title>
 	<link rel="icon" href="<?= $baseAssetsPath . "logo.svg"; ?>" type="image/svg+xml">
-	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v1"; ?>">
+	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v2"; ?>">
 	<script defer src="<?= $baseAssetsPath . "script.js"; ?>"></script>
 </head>
 	
@@ -80,11 +80,24 @@ if ($pageTitle !== "Acesso")
 	$relatorioId = $pageTitle === "Relatório" ? "currentPage" : null;
 
 	echo "
-	<img id='logo' src='../assets/logo.svg'>
 	<nav>
 		<a id='$comercialId' href='../comercial/ '>Comercial</a>
 		<a id='$financeiroId' href='../financeiro/'>Financeiro</a>
 		<a id='$relatorioId' href='../relatorio/'>Relatório</a>
+		<div id='tableNav'>
+		    <button id='top' class='tableNavBtn'>
+		        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-up'><polyline points='18 15 12 9 6 15'></polyline></svg>
+		    </button>
+		    <button id='bottom' class='tableNavBtn'>
+		        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-down'><polyline points='6 9 12 15 18 9'></polyline></svg>
+		    </button>
+		    <button id='left' class='tableNavBtn'>
+		        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-left'><polyline points='15 18 9 12 15 6'></polyline></svg>
+		    </button>
+		    <button id='right' class='tableNavBtn'>
+		        <svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-chevron-right'><polyline points='9 18 15 12 9 6'></polyline></svg>
+		    </button>
+		</div>
 	</nav>
 	<h5 id='authenticatedUser'>
 		<a href='./?desconectar'>Sair</a>

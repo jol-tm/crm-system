@@ -1,9 +1,11 @@
 :root {
 	--primaryColor: #c1a995;
+	--primaryColorTransparent: #c1a995cc;
 	--backgroundColor: #dddddd;
 	--darkColor: #000000;
 	--lightColor: #ffffff;
 	--confirmColor: darkgreen;
+	--confirmColorTransparent: #006400cc;
 	--warnColor: darkgoldenrod;
 	--destructiveColor: darkred;
 	--transitionsDuration: 0.3s;
@@ -21,10 +23,6 @@
 	font-family: 'Funnel Sans';
 	font-display: swap;
 	src: url('FunnelSans.ttf');
-}
-
-html {
-	scroll-behavior: smooth;
 }
 
 body {
@@ -81,10 +79,10 @@ input {
 }
 
 button {
-	border: none;
-	transition: var(--transitionsDuration);
 	color: var(--lightColor);
 	background-color: var(--confirmColor);
+	border: none;
+	transition: var(--transitionsDuration);
 }
 
 svg {
@@ -109,7 +107,7 @@ table {
 thead {
     position: sticky;
     top: 0;
-    background-color: #c1a995cc;
+    background-color: var(--primaryColorTransparent);
     text-wrap: nowrap;
 }
 
@@ -124,6 +122,21 @@ th {
 	border: 2px solid var(--primaryColor);
 	background-color: var(--lightColor);
     border-radius: 0.5rem;
+    scroll-behavior: smooth;
+}
+
+#tableNav {
+    display: flex;
+    gap: 0.5rem;
+    position: fixed;
+    bottom: 1rem;
+}
+
+.tableNavBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--confirmColorTransparent);
 }
 
 #authenticatedUser {
@@ -136,13 +149,6 @@ th {
 	    padding: 0.5rem;
 	    border-radius: 0.5rem;
 	}
-}
-
-#logo {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-    height: 2rem;
 }
 
 #searchBox {
@@ -218,12 +224,15 @@ th {
 .denyProposalBtn,
 .deleteProposalBtn,
 .updateProposalBtn,
-.backPendingBtn {
+.backPendingBtn,
+.tableNavBtn,
+#searchBtn {
 	font-size: 1.5rem;
 	font-weight: normal;
-	padding: 0;
 	width: 2.5rem;
 	height: 2.5rem;
+	padding: 0;
+	margin: auto;
 }
 
 /* COMERCIAL */
