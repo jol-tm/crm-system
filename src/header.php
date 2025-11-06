@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+
 <?php
 
 ini_set("display_errors", 1);
@@ -59,7 +61,6 @@ $baseAssetsPath = "/crm-system/app/assets/";
 
 ?>
 
-<!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
@@ -68,7 +69,7 @@ $baseAssetsPath = "/crm-system/app/assets/";
 	<title>BMS | <?= $pageTitle; ?></title>
 	<link rel="icon" href="<?= $baseAssetsPath . "logo.svg"; ?>" type="image/svg+xml">
 	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v2"; ?>">
-	<script defer src="<?= $baseAssetsPath . "script.js"; ?>"></script>
+	<script defer src="<?= $baseAssetsPath . "script.js?v2"; ?>"></script>
 </head>
 	
 <?php
@@ -80,6 +81,7 @@ if ($pageTitle !== "Acesso")
 	$relatorioId = $pageTitle === "Relatório" ? "currentPage" : null;
 
 	echo "
+	<img id='logo' src='../assets/logo.svg' height='32'>
 	<nav>
 		<a id='$comercialId' href='../comercial/ '>Comercial</a>
 		<a id='$financeiroId' href='../financeiro/'>Financeiro</a>
@@ -100,7 +102,7 @@ if ($pageTitle !== "Acesso")
 		</div>
 	</nav>
 	<h5 id='authenticatedUser'>
-		<a href='./?desconectar'>Sair</a>
+		{$_SESSION['authenticatedUser']} | <a href='./?desconectar'>Sair</a>
 	</h5>
 	";
 }

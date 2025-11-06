@@ -47,7 +47,8 @@ nav,
 }
 
 nav {
-    margin: 0.5rem 0 0 0;
+    z-index: 1;
+    margin-top: 0.5rem;
 	background-color: var(--primaryColor);
 }
 
@@ -143,12 +144,16 @@ th {
     position: absolute;
     top: 1rem;
     right: 0.5rem;
+
 	a {
-		color: var(--lightColor);
-	    background-color: var(--destructiveColor);
-	    padding: 0.5rem;
-	    border-radius: 0.5rem;
+		color: var(--destructiveColor);
 	}
+}
+
+#logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
 }
 
 #searchBox {
@@ -197,13 +202,6 @@ th {
 
 .failureNotification {
 	background-color: var(--destructiveColor);
-}
-
-#scrollTopBtn,
-#scrollBottomBtn {
-	padding: 0.25rem;
-	border-radius: 0.5rem;
-	background-color: var(--primaryColor);
 }
 
 /* LOGIN page*/

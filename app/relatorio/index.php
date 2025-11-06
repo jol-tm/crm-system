@@ -40,7 +40,7 @@ require_once '../../src/Proposta.php';
 					</table>
 				</div>
 				<h6>* Propostas aceitas nesse mês podem ser referentes a meses anteriores.</h6>
-				<h6>** O valor recebido apenas considera pagamentos finalizados completamente, parcelas não estão incluídas. Valores recebidos nesse mês podem ser referentes a propostas de meses anteriores</h6>
+				<h6>** O valor recebido apenas considera pagamentos finalizados completamente, parcelas não estão incluídas. Valores recebidos nesse mês podem ser referentes a propostas de meses anteriores.</h6>
 			";
 		}	
 	?>

@@ -4,7 +4,6 @@ const formWrapper = document.querySelector(".formWrapper");
 
 showRegisterProposalFormBtn !== null ? showRegisterProposalFormBtn.addEventListener("click", () => showModal(formWrapper)) : null;
 cancelRegisterProposalBtn !== null ? cancelRegisterProposalBtn.addEventListener("click", () => hideModal(formWrapper)) : null;
-cancelRegisterProposalBtn !== null ? cancelRegisterProposalBtn.addEventListener("click", () => hideModal(formWrapper)) : null;
 
 function showModal(modal)
 {
@@ -18,8 +17,8 @@ function hideModal(modal)
 
 // Table navigator
 const table = document.querySelector(".tableResponsive");
-const tableHeight = table?.scrollHeight ?? null;
-const tableWidth = table?.scrollWidth ?? null;
+//const tableHeight = table?.scrollHeight ?? null;
+//const tableWidth = table?.scrollWidth ?? null;
 const topBtn = document.querySelector("#top");
 const bottomBtn = document.querySelector("#bottom");
 const leftBtn = document.querySelector("#left");
