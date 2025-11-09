@@ -25,6 +25,20 @@
 	src: url('FunnelSans.ttf');
 }
 
+::-webkit-scrollbar {
+    width: 0.25rem;
+    height: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--primaryColorTransparent);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--confirmColor);
+    border-radius: 0.5rem;
+}
+
 body {
 	font-family: var(--primaryFont), sans-serif;
 	display: flex;
@@ -32,6 +46,8 @@ body {
 	align-items: center;
 	flex-direction: column;
 	gap: 0.5rem;
+	padding: 0.5rem;
+	overflow: hidden;
 	background-color: var(--backgroundColor);
 }
 
@@ -48,7 +64,6 @@ nav,
 
 nav {
     z-index: 1;
-    margin-top: 0.5rem;
 	background-color: var(--primaryColor);
 }
 
@@ -117,27 +132,13 @@ th {
 }
 
 .tableResponsive {
-    max-height: 83vh;
-	max-width: 99vw;
+    max-height: 90vh;
+	max-width: 100%;
 	overflow: auto;
 	border: 2px solid var(--primaryColor);
 	background-color: var(--lightColor);
     border-radius: 0.5rem;
     scroll-behavior: smooth;
-}
-
-#tableNav {
-    display: flex;
-    gap: 0.5rem;
-    position: fixed;
-    bottom: 1rem;
-}
-
-.tableNavBtn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--confirmColorTransparent);
 }
 
 #authenticatedUser {
@@ -148,17 +149,6 @@ th {
 	a {
 		color: var(--destructiveColor);
 	}
-}
-
-#logo {
-    position: absolute;
-    top: 0.5rem;
-    left: 0.5rem;
-}
-
-#searchBox {
-	padding: 0;
-	flex-direction: row;
 }
 
 #currentPage {
@@ -235,6 +225,12 @@ th {
 
 /* COMERCIAL */
 
+#showRegisterProposalFormBtn {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+
 .denyProposalBtn,
 .deleteProposalBtn,
 #cancelRegisterProposalBtn {
@@ -250,6 +246,14 @@ th {
 }
 
 /* FINANCES */
+
+#searchBox {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	padding: 0;
+	flex-direction: row;
+}
 
 #updateStatusBtn {
 	color: var(--lightColor);
