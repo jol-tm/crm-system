@@ -51,6 +51,33 @@ body {
 	background-color: var(--backgroundColor);
 }
 
+header {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav {
+	z-index: 1;
+	position: fixed;
+	background-color: var(--primaryColor);
+}
+
+@media (max-width: 850px) {
+	nav {
+		bottom: 0.5rem;
+		background-color: var(--primaryColorTransparent);
+	}
+}
+
+@media (min-width: 851px) {
+	nav {
+		top: 0.5rem;
+	}
+}
+
 input,
 button,
 svg,
@@ -60,11 +87,6 @@ nav,
 	font-size: 1rem;
 	border-radius: 0.5rem;
 	padding: 0.5rem;
-}
-
-nav {
-    z-index: 1;
-	background-color: var(--primaryColor);
 }
 
 a {
@@ -90,11 +112,13 @@ label {
 }
 
 input {
-	width: auto;
+	box-sizing: border-box;
+	width: 100%;
 	border: 2px solid var(--primaryColor);
 }
 
 button {
+	padding: 0.625rem;
 	color: var(--lightColor);
 	background-color: var(--confirmColor);
 	border: none;
@@ -132,8 +156,8 @@ th {
 }
 
 .tableResponsive {
-    max-height: 90vh;
-	max-width: 100%;
+    max-height: 90dvh;
+	max-width: 99.7%;
 	overflow: auto;
 	border: 2px solid var(--primaryColor);
 	background-color: var(--lightColor);
@@ -142,10 +166,6 @@ th {
 }
 
 #authenticatedUser {
-    position: absolute;
-    top: 1rem;
-    right: 0.5rem;
-
 	a {
 		color: var(--destructiveColor);
 	}
@@ -225,12 +245,6 @@ th {
 
 /* COMERCIAL */
 
-#showRegisterProposalFormBtn {
-	position: fixed;
-	top: 0.5rem;
-	left: 0.5rem;
-}
-
 .denyProposalBtn,
 .deleteProposalBtn,
 #cancelRegisterProposalBtn {
@@ -248,9 +262,6 @@ th {
 /* FINANCES */
 
 #searchBox {
-	position: fixed;
-	top: 0.5rem;
-	left: 0.5rem;
 	padding: 0;
 	flex-direction: row;
 }
@@ -267,8 +278,6 @@ th {
 	color: var(--lightColor);
 	background-color: var(--destructiveColor);
 }
-
-/* REPORT */
 
 /* PROPOSALS WARNING STATUS */
 

@@ -7,7 +7,7 @@ require_once '../../src/Proposta.php';
 
 ?>
 
-<body>
+</header>
 	<form action='' method='get'>
 		<label for='data'>Mês e Ano (Qualquer dia)</label>
 		<input id='data' name='data' type='date' value="<?= (new DateTime())->format("Y-m-d"); ?>" required>

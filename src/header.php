@@ -3,6 +3,7 @@
 <?php
 
 $baseAssetsPath = "/app/assets/";
+$baseAssetsPath = "/crm-system/app/assets/";
 
 ini_set("display_errors", 1);
 ini_set("session.cookie_lifetime", 3600);
@@ -59,7 +60,6 @@ if (isset($_SESSION["notification"]))
 	unset($_SESSION["notification"]);
 }
 
-
 ?>
 
 <html lang="pt-br">
@@ -72,7 +72,9 @@ if (isset($_SESSION["notification"]))
 	<link rel="stylesheet" href="<?= $baseAssetsPath . "style.css?v3"; ?>">
 	<script defer src="<?= $baseAssetsPath . "script.js?v3"; ?>"></script>
 </head>
-	
+
+<body>
+
 <?php
 
 if ($pageTitle !== "Acesso")
@@ -87,9 +89,10 @@ if ($pageTitle !== "Acesso")
 		<a id='$financeiroId' href='../financeiro/'>Financeiro</a>
 		<a id='$relatorioId' href='../relatorio/'>Relatório</a>
 	</nav>
-	<h5 id='authenticatedUser'>
-		{$_SESSION['authenticatedUser']} | <a href='./?desconectar'>Sair</a>
-	</h5>
+	<header>
+		<h5 id='authenticatedUser'>
+			{$_SESSION['authenticatedUser']} | <a href='./?desconectar'>Sair</a>
+		</h5>
 	";
 }
 

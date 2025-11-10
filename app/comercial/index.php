@@ -75,9 +75,9 @@ if (isset($_POST["excluirProposta"]))
 
 ?>
 
-<body>
+	<button id="showRegisterProposalFormBtn">Cadastrar proposta</button>
+</header>
 
-<button id="showRegisterProposalFormBtn">Cadastrar proposta</button>
 <div id="registerProposalForm" class="formWrapper">
 	<form action="" method="post" class="customForm">
 		<h2>Cadastrar Proposta</h2>
