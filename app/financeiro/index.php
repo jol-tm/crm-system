@@ -163,7 +163,9 @@ if (isset($_POST["mostrarAtualizarStatus"]) && filter_var($_POST["id"], FILTER_V
 				
 				if ($ultimoMes !== $mes)
 				{
-					echo "<tr><td colspan='19'><h2>{$meses[$mes]}/$ano</h2></td></tr>";
+					$relatorio = (new Proposta())->gerarRelatorio("$ano-$mes");
+					echo "<tr><td colspan='20'><h2>{$meses[$mes]}/$ano</h2></td></tr>";
+					echo "<tr><td colspan='20'><h4>{$relatorio['propostasEnviadas']} propostas enviadas, {$relatorio['propostasAceitas']} aceitas, R$ {$relatorio['valorRecebido']} recebido</h4></td></tr>";
 				}
 				
 				$ultimoMes = $mes;

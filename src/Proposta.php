@@ -402,7 +402,7 @@ class Proposta
 			"data" => "$mes/$ano",
 			"propostasEnviadas" => $propostasEnviadas,
 			"propostasAceitas" => $propostasAceitas,
-			"valorRecebido" => str_replace(".", ",", $valorRecebido)
+			"valorRecebido" => number_format($valorRecebido, 2, ',', '.')
 		];
 	}
 }
